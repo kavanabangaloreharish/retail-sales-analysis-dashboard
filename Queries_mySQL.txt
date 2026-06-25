@@ -1,0 +1,50 @@
+-- ===================================
+-- Retail Sales Analysis - SQL Queries
+-- Tool: MySQL Workbench
+-- Table: superstore_clean
+-- ===================================
+
+-- Query 1: Top 10 products by total revenue
+SELECT 
+    `Product Name`,
+    ROUND(SUM(Sales), 2) AS total_sales
+FROM superstore_clean
+GROUP BY `Product Name`
+ORDER BY total_sales DESC
+LIMIT 10;
+
+-- Query 2: Top 10 customers by revenue and profit
+SELECT 
+    `Customer Name`,
+    ROUND(SUM(Sales), 2) AS total_sales,
+    ROUND(SUM(Profit), 2) AS total_profit
+FROM superstore_clean
+GROUP BY `Customer Name`
+ORDER BY total_sales DESC
+LIMIT 10;
+
+-- Query 3: Worst-performing categories/sub-categories by profit
+SELECT 
+    Category,
+    `Sub-Category`,
+    ROUND(SUM(Sales), 2) AS total_sales,
+    ROUND(SUM(Profit), 2) AS total_profit
+FROM superstore_clean
+GROUP BY Category, `Sub-Category`
+ORDER BY total_profit ASC
+LIMIT 10;
+
+-- Query 4: Monthly revenue trend with month-over-month change (CTE + Window Function)
+WITH monthly_sales AS (
+    SELECT 
+        DATE_FORMAT(`Order Date`, '%Y-%m') AS month,
+        SUM(Sales) AS total_sales
+    FROM superstore_clean
+    GROUP BY month
+)
+SELECT 
+    month,
+    ROUND(total_sales, 2) AS total_sales,
+    ROUND(total_sales - LAG(total_sales) OVER (ORDER BY month), 2) AS sales_change
+FROM monthly_sales
+ORDER BY month;
