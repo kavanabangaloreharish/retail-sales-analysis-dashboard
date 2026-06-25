@@ -1,4 +1,4 @@
-# retail-sales-analysis-dashboard
+# Retail Sales Analysis Dashboard
 
 ## Objective
 Analyze retail sales data to identify top revenue-generating products, 
@@ -6,7 +6,7 @@ best-performing regions, most profitable customer segments, and monthly
 sales trends.
 
 ## Tools Used
-Excel, SQL, Power BI
+Excel, SQL (SQLite & MySQL), Power BI
 
 ## Dataset
 Sample Superstore Dataset (Kaggle)
@@ -16,18 +16,30 @@ Sample Superstore Dataset (Kaggle)
 2. Which regions perform best?
 3. Which customer segments are most profitable?
 4. What are the monthly sales trends?
+5. Who are the top customers, and which categories underperform on profit?
 
 ## Key Insights
+
+### From Excel Analysis
 - Canon imageCLASS 2200 Advanced Copier is the top revenue product ($61.6K)
 - West region leads in both sales and profit
 - Consumer segment is the most profitable
 - Sales grew from $484K (2014) to $733K (2017)
 
+### From SQL Analysis
+- Identified top 10 customers by revenue and profit contribution
+- Found specific sub-categories with the weakest profit performance, 
+  highlighting where discounting or cost issues may be hurting margins
+- Built a monthly revenue trend with month-over-month change using a 
+  CTE and window function (LAG)
+
+## SQL Analysis
+Queries were written and tested in both **SQLite** (DB Browser) and 
+**MySQL** (MySQL Workbench) to demonstrate adaptability across SQL 
+dialects. Both versions are available in `/sql-queries/`.
+
+Techniques used: GROUP BY, aggregations (SUM, ROUND), CTEs, and window 
+functions (LAG).
+
 ## Repository Structure
-```
-data/           → raw and cleaned dataset
-sql-queries/    → SQL scripts for analysis
-excel-files/    → Excel workbook with pivot tables
-powerbi-file/   → Power BI dashboard file
-screenshots/    → dashboard images
 ```
