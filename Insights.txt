@@ -1,0 +1,31 @@
+Retail Sales Analysis — Key Insights
+
+Top Revenue Products
+The Canon imageCLASS 2200 Advanced Copier is the clear winner here, bringing 
+in $61.6K — way more than double whatever's in second place. Most of the 
+top 10 products are office equipment like copiers, printers, and binding 
+machines, not everyday office supplies. Makes sense, since these are 
+big-ticket items.
+
+Region Performance
+West is the strongest region overall, leading in both sales ($725K) and 
+profit ($108K), with East close behind. What's interesting is South — it 
+has the lowest sales of all four regions but still beats Central on profit. 
+So Central is moving more product than South but keeping less of it as 
+profit. Worth digging into why (probably discounting, but I'd want to check 
+in SQL before assuming).
+
+Customer Segments
+Consumer is the most profitable segment by a good margin — about $134K, 
+compared to $92K for Corporate and just $60K for Home Office. So individual 
+buyers are actually driving more profit than business clients, which I 
+didn't expect going in.
+
+Sales Trend Over Time
+Sales basically stayed flat from 2014 to 2015, then took off — growing from 
+$484K in 2014 to $733K by 2017. So the real growth story is in the last two 
+years, not a steady climb the whole time.
+
+---
+Total sales across all 4 years: $2.3M
+Total profit: $286K
