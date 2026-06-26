@@ -53,8 +53,3 @@ Built an interactive dashboard featuring:
 - Written business insights embedded directly in the dashboard
 
 File available in `/powerbi-file/`.
-
-## Repository Structure
-
-## Repository Structure
-```
