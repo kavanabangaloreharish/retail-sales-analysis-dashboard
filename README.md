@@ -18,6 +18,9 @@ Sample Superstore Dataset (Kaggle)
 4. What are the monthly sales trends?
 5. Who are the top customers, and which categories underperform on profit?
 
+## Dashboard Preview
+![Power BI Dashboard](screenshots/powerbi_dashboard.png)
+
 ## Key Insights
 
 ### From Excel Analysis
@@ -33,6 +36,18 @@ Sample Superstore Dataset (Kaggle)
 - Built a monthly revenue trend with month-over-month change using a 
   CTE and window function (LAG)
 
+### From Power BI Dashboard
+- West region leads in both revenue and profit, while Central shows 
+  weaker profit relative to its sales volume, suggesting margin pressure
+- Consumer segment drives 47% of total profit, nearly 1.5x more than 
+  Corporate and over 2x Home Office
+- Revenue shows a clear seasonal pattern, dipping at the start of most 
+  years before recovering, with growth accelerating sharply through 
+  2016-2017
+- A single product accounts for more than double the revenue of the 
+  next highest product, showing heavy reliance on a small number of 
+  high-ticket items
+
 ## SQL Analysis
 Queries were written and tested in both **SQLite** (DB Browser) and 
 **MySQL** (MySQL Workbench) to demonstrate adaptability across SQL 
@@ -40,6 +55,19 @@ dialects. Both versions are available in `/sql-queries/`.
 
 Techniques used: GROUP BY, aggregations (SUM, ROUND), CTEs, and window 
 functions (LAG).
+
+## Power BI Dashboard
+Built an interactive dashboard featuring:
+- KPI cards: Total Revenue, Total Profit, Total Orders, Profit Margin
+- Revenue trend by quarter (2014-2017)
+- Region-wise revenue and profit comparison
+- Top 10 products by revenue
+- Customer segment profit breakdown
+- Written business insights embedded directly in the dashboard
+
+File available in `/powerbi-file/`.
+
+## Repository Structure
 
 ## Repository Structure
 ```
