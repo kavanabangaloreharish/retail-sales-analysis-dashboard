@@ -18,9 +18,6 @@ Sample Superstore Dataset (Kaggle)
 4. What are the monthly sales trends?
 5. Who are the top customers, and which categories underperform on profit?
 
-## Dashboard Preview
-![Power BI Dashboard](screenshots/powerbi_dashboard.png)
-
 ## Key Insights
 
 ### From Excel Analysis
